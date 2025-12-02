@@ -7,10 +7,10 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_PREFIX_PATH "/home/ljq/software/Qt/6.9.3/gcc_64" ${CMAKE_PREFIX_PATH})
+# set(CMAKE_PREFIX_PATH "/home/ljq/software/Qt/6.9.3/gcc_64" ${CMAKE_PREFIX_PATH})
 
 find_package(PkgConfig REQUIRED)
-find_package(Qt6 REQUIRED COMPONENTS Widgets) 
+# find_package(Qt6 REQUIRED COMPONENTS Widgets) 
 find_package(SDL2 REQUIRED)
 
 set(FFMPEG_INSTALL_ROOT "/usr/local/ffmpeg")
@@ -36,9 +36,9 @@ target_include_directories(0voice_player PRIVATE
 )
 
 target_link_libraries(0voice_player PRIVATE PkgConfig::FFMPEG)
-target_link_libraries(0voice_player PRIVATE Qt::Core
-                                          Qt::Gui
-                                          Qt::Widgets)
+# target_link_libraries(0voice_player PRIVATE Qt::Core
+#                                           Qt::Gui
+#                                           Qt::Widgets)
 target_link_libraries(0voice_player PRIVATE SDL2::SDL2) 
 
 # 关键：对“目标”设置 RPATH（构建期 & 安装后）
