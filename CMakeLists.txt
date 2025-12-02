@@ -32,7 +32,7 @@ add_executable(0voice_player ${SOURCE_FILES})
 # 添加头文件目录
 target_include_directories(0voice_player PRIVATE 
     ${CMAKE_CURRENT_SOURCE_DIR}/Headers
-    # ${FFMPEG_INCLUDE_DIRS}
+    ${FFMPEG_INCLUDE_DIRS}
 )
 
 target_link_libraries(0voice_player PRIVATE PkgConfig::FFMPEG)
